@@ -1,19 +1,21 @@
 import Image from "next/image";
+import Head from "next/head";
 import { useState } from "react";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
 type HeaderProps = {
-  title: string,
-}
+  title: string;
+};
 
 const Header = ({ title }: HeaderProps) => {
-  return <h1>{title ? title : 'Default title'}</h1>;
-}
+  return <h1>{title ? title : "Default title"}</h1>;
+};
 
 export default function Home() {
-  const names = ['Louis', 'Macintosh', 'Kedziora'];
+  const names = ["Louis", "Macintosh", "Kedziora"];
 
   const [likes, setLikes] = useState(0);
 
@@ -22,7 +24,14 @@ export default function Home() {
   }
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <Header title="Develop. Preview. Ship. 🚀" />
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Header title="Develop. Preview. Ship. 🚀" />
+      <h1 className="title">
+        Read <Link href="/posts/first-post">this page!</Link>
+      </h1>
       <ul>
         {names.map((name) => (
           <li key={name}>{name}</li>
