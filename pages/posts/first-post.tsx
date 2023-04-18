@@ -9,10 +9,8 @@ export default function FirstPost() {
         <title>First Post</title>
       </Head>
 
-      <h1>Me</h1>
-      <h2>
-        <Link href="/">Back to home</Link>
-      </h2>
+      <h1>Here be the first of many posts</h1>
+
     </Layout>
   );
 }

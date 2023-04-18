@@ -70,6 +70,12 @@ export default function Layout({
           <Link href="/">← Back to home</Link>
         </div>
       )}
+      <div>
+        <Link href="/contact">Contact</Link>
+      </div>
+      <div>
+        <Link href="/posts/first-post">First Past the Post</Link>
+      </div>
     </div>
   );
 }
