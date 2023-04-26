@@ -21,14 +21,7 @@ const Header = ({ title }: HeaderProps) => {
   return <h1>{title ? title : "Default title"}</h1>;
 };
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
+
 
 export default function Home({ allPostsData } : HomeProps) {
   return (
@@ -56,4 +49,13 @@ export default function Home({ allPostsData } : HomeProps) {
       </section>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
 }

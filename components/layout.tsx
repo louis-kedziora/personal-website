@@ -73,9 +73,6 @@ export default function Layout({
       <div>
         <Link href="/contact">Contact</Link>
       </div>
-      <div>
-        <Link href="/posts/first-post">First Past the Post</Link>
-      </div>
     </div>
   );
 }
